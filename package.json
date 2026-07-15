@@ -1,7 +1,7 @@
 {
   "name": "collaborative-writing-platform",
   "version": "1.0.0",
-  "description": "A simple collaborative writing platform for 2 people",
+  "description": "A simple collaborative writing platform for 2 people without email authentication",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

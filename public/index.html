@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Writing Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Collaborative Writing</h1>
+            <p>Write together without email or accounts</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="sidebar">
+                <div class="user-info">
+                    <h3>Your Name</h3>
+                    <input type="text" id="userName" placeholder="Enter your name" value="">
+                    <button id="updateNameBtn" class="btn-small">Update</button>
+                </div>
+                
+                <div class="documents-section">
+                    <h3>Documents</h3>
+                    <button id="newDocBtn" class="btn">+ New Document</button>
+                    <div id="documentsList" class="documents-list"></div>
+                </div>
+            </div>
+            
+            <div class="editor-section">
+                <div class="editor-header">
+                    <input type="text" id="docTitle" placeholder="Document Title" class="doc-title-input">
+                    <span id="syncStatus" class="sync-status">Synced</span>
+                </div>
+                
+                <textarea id="editor" placeholder="Start writing here... Your changes will be saved automatically."></textarea>
+                
+                <div class="footer">
+                    <p>Share this URL with your collaborator: <input type="text" id="shareUrl" readonly class="share-url"></p>
+                    <button id="copyUrlBtn" class="btn-small">Copy Link</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

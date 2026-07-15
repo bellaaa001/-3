@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+.main-content {
+    display: flex;
+    gap: 20px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    height: 600px;
+}
+
+.sidebar {
+    width: 280px;
+    background: #f8f9fa;
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 1px solid #e9ecef;
+}
+
+.user-info {
+    margin-bottom: 30px;
+}
+
+.user-info h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+.user-info input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+.documents-section h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 15px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-small {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-small:hover {
+    background: #5568d3;
+}
+
+.documents-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.doc-item {
+    padding: 10px 12px;
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.9em;
+    color: #495057;
+}
+
+.doc-item:hover {
+    background: #e7f3ff;
+    border-color: #667eea;
+    color: #667eea;
+}
+
+.doc-item.active {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+.editor-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.doc-title-input {
+    flex: 1;
+    font-size: 1.5em;
+    font-weight: 600;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 8px 0;
+    transition: border-color 0.2s;
+}
+
+.doc-title-input:focus {
+    outline: none;
+    border-bottom-color: #667eea;
+}
+
+.sync-status {
+    font-size: 0.85em;
+    color: #28a745;
+    font-weight: 600;
+}
+
+.sync-status.syncing {
+    color: #ffc107;
+}
+
+.sync-status.error {
+    color: #dc3545;
+}
+
+#editor {
+    flex: 1;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 15px;
+    font-family: 'Monaco', 'Courier New', monospace;
+    font-size: 1em;
+    line-height: 1.6;
+    resize: none;
+    transition: border-color 0.2s;
+}
+
+#editor:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.footer {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #dee2e6;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.footer p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.share-url {
+    padding: 6px 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    font-size: 0.85em;
+    flex: 1;
+    min-width: 200px;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e9ecef;
+    }
+    
+    header h1 {
+        font-size: 1.8em;
+    }
+}
