@@ -1,0 +1,83 @@
+:root{
+  --bg1:#ffe6f0;
+  --bg2:#fff0f7;
+  --accent:#ff4da6;
+  --muted:#6b6b6b;
+}
+*{box-sizing:border-box}
+body{
+  font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin:0;
+  min-height:100vh;
+  background: linear-gradient(135deg,var(--bg1),var(--bg2));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  color:#222;
+}
+.container{
+  width:100%;
+  max-width:420px;
+}
+header{text-align:center;margin-bottom:12px}
+h1{margin:0;font-weight:600}
+.heart{color:var(--accent);margin-left:6px}
+.subtitle{margin:6px 0 0;color:var(--muted);font-size:0.95rem}
+
+.card{
+  background:rgba(255,255,255,0.85);
+  border-radius:18px;
+  padding:16px;
+  box-shadow: 0 8px 30px rgba(255,77,166,0.08);
+  margin-bottom:12px;
+}
+
+.hidden{display:none}
+
+#setup input{
+  width:100%;
+  padding:10px 12px;
+  margin-bottom:8px;
+  border-radius:10px;
+  border:1px solid #ffd6ea;
+  background:linear-gradient(0deg, rgba(255,255,255,0.7), rgba(255,255,255,0.7));
+}
+
+button{
+  background:var(--accent);
+  color:white;
+  border:none;
+  padding:10px 14px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+button.small{background:transparent;color:var(--muted);padding:6px; border-radius:8px}
+
+.hint{display:block;color:var(--muted);margin-top:6px}
+
+.chat-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+#messages{
+  height:420px;
+  overflow:auto;
+  padding:12px;
+  border-radius:12px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.02);
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.msg{max-width:78%;padding:10px 12px;border-radius:16px;line-height:1.25}
+.msg.you{align-self:flex-end;background:linear-gradient(180deg,var(--accent),#ff75bf);color:white;border-bottom-right-radius:6px}
+.msg.other{align-self:flex-start;background:#fff;border:1px solid #ffd6ea;color:#333;border-bottom-left-radius:6px}
+
+.smallmeta{font-size:0.75rem;color:var(--muted);margin-top:6px}
+
+.composer{display:flex;gap:8px;margin-top:10px}
+.composer input{flex:1;padding:10px;border-radius:12px;border:1px solid #ffd6ea}
+.composer button{padding:10px 14px;border-radius:12px}
+footer{text-align:center;margin-top:8px;color:var(--muted)}

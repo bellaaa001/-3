@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LoveChat</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Firebase (compat libs for simpler example) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>LoveChat <span class="heart">♥</span></h1>
+      <p class="subtitle">A cozy place for two</p>
+    </header>
+
+    <div id="setup" class="card">
+      <input id="displayName" placeholder="Your name (optional)" />
+      <input id="roomId" placeholder="Room ID (share with the other person)" />
+      <button id="joinBtn">Join Room</button>
+      <small class="hint">Create any short room id (e.g. alice-bob). Both people must use the same ID.</small>
+    </div>
+
+    <div id="chatWrap" class="card hidden">
+      <div class="chat-header">
+        <div id="roomLabel"></div>
+        <button id="leaveBtn" class="small">Leave</button>
+      </div>
+
+      <div id="messages" class="messages"></div>
+
+      <form id="messageForm" class="composer">
+        <input id="msgInput" placeholder="Send a sweet message..." autocomplete="off" />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <footer>
+      <small>Designed with love 💗</small>
+    </footer>
+  </div>
+
+  <script>
+    // TODO: Replace with your Firebase config
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_AUTH_DOMAIN",
+      databaseURL: "YOUR_DATABASE_URL",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_STORAGE_BUCKET",
+      messagingSenderId: "YOUR_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script src="app.js"></script>
+</body>
+</html>
